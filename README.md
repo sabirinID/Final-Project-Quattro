@@ -1,6 +1,12 @@
 # Online Shoppers Purchasing Intention
 Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Science Career Bootcamp di <a href="https://www.rakamin.com/">Rakamin</a>.
 
+<p align="center">
+  <img src="Images/banner-by-namogoo.png" width="1024" height="auto">
+  <br>
+  Image by <a href="https://www.namogoo.com/">Namogoo</a>
+</p>
+
 ## Contributors
 * Dimas as Data Science Team Lead, Data Scientist
 * Dila as Data Scientist
