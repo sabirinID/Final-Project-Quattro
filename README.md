@@ -1,14 +1,14 @@
 # Online Shoppers Purchasing Intention
 Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Science Career Bootcamp di <a href="https://www.rakamin.com/">Rakamin</a>.
 
-Kontributor:
-1. Syahril Dimas Sabirin sebagai Data Science Team Lead, Data Scientist
-2. Siti Nurfadillah Salsabila Amirullah as Data Scientist
-3. Lana Fuadi sebagai Data Analyst
-4. Yusuf Lukito Pramudana sebagai Data Analyst
-5. Aulia Rizkiyana sebagai Business Intelligence Analyst
-6. Keven Jevry sebagai Business Intelligence Analyst
-7. Andre Wijaya sebagai Machine Learning Engineer
+## Contributors
+* Dimas as Data Science Team Lead, Data Scientist
+* Dila as Data Scientist
+* Lana as Data Analyst
+* Ucup as Data Analyst
+* Aulia as Business Intelligence Analyst
+* Keven as Business Intelligence Analyst
+* Andre as Machine Learning Engineer
 
 ## Table of Contents
 * [Preparation](#Stage-0-Preparation)
