@@ -1,5 +1,5 @@
 # Online Shoppers Purchasing Intention
-Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Science Career Bootcamp di Rakamin Acadeny.
+Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Science Career Bootcamp di <a href="https://www.rakamin.com/">Rakamin</a>.
 
 Kontributor:
 1. Syahril Dimas Sabirin sebagai Data Science Team Lead, Data Scientist
