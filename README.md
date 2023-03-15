@@ -11,14 +11,14 @@ Kontributor:
 7. Andre Wijaya sebagai Machine Learning Engineer
 
 ## Table of Contents
-* [Preparation](#Stage-0-Preparation))
+* [Preparation](#Stage-0-Preparation)
     * [Problem Statement](#01-Problem-Statement)
     * [Goal](#02-Goal)
     * [Objective](#03-Objective)
     * [Business Metrics](#04-Business-Metrics)
 * [Exploratory Data Analysis](#Stage-1-Exploratory-Data-Analysis)
     * [Data Exploration](#11-Data-Exploration)
-    * [Data Understanding](#12.Data-Understanding)
+    * [Data Understanding](#12-Data-Understanding)
     * [Exploratory Data Analysis](#13-Exploratory-Data-Analysis)    
 * [Data Preprocessing](#Stage-2-Data-Preprocessing)
     * [Data Cleansing](#21-Data-Cleansing)
