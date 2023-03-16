@@ -7,7 +7,7 @@ Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Sci
   Image by <a href="https://www.namogoo.com/">Namogoo</a>
 </p>
 
-## Contributors
+## Authors and Contributors
 * Dimas as Data Science Team Lead, Data Scientist
 * Dila as Data Scientist
 * Lana as Data Analyst
