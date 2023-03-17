@@ -58,6 +58,13 @@ Untuk mendapatkan ringkasan singkat tentang dataset, kami menggunakan fungsi `in
 #### 1.2.3. Detect Missing Values
 Untuk memastikan adanya _missing values_ dalam dataset, kita menggunakan metode `isna()`.
 - Tidak ada kolom yang _null_ (bernilai None ataupun NaN).
+#### 1.2.4. Detect Duplicates
+Untuk menemukan adanya _duplicates_, kita menggunakan metode `duplicated()`. Ternyata ditemukan data duplikat sebanyak 125 baris. Walaupun dalam dataset ini ada data duplikat, kita berasumsi bahwa data tersebut merupakan data unik, yang terkait dengan sesi kunjungan pelanggan.
+#### 1.2.5. Unique Elements
+Untuk mencari elemen unik dalam dataset, kita menggunakan fungsi `nunique()`.
+- Fitur `Administrative_Duration`, `Informational_Duration`, dan `ProductRelated_Duration` memiliki elemen unik yang cukup banyak, sehingga kita bisa hapus fitur ini atau kita buat fitur baru `TotalPage_Duration`.
+- Fitur `Administrative`, `Informational`, dan `ProductRelated` juga bisa buat fitur baru `TotalPage`.
+- Fitur `BounceRates`, `ExitRates`, dan `PageValues` akan dipertahankan.
 
 ### 1.3. Descriptive Statistics
 Untuk mendapatkan perincian statistik dasar dari dataset, kita menggunakan metode `describe()`.
