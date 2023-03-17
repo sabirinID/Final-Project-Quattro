@@ -43,8 +43,18 @@ Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Sci
 ## Stage 1. Exploratory Data Analysis
 
 ### 1.1. Data Exploration
+Dataset [Online Shoppers Purchasing Intention](https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset/) merupakan dataset yang dibentuk secara khusus, sehingga setiap sesi akan dimiliki oleh pelanggan yang berbeda selama periode 1 tahun. Dataset ini terdiri dari 12.330 baris dan 18 kolom fitur, setiap baris berisi data yang berkaitan dengan sesi kunjungan (waktu yang dihabiskan) pelanggan pada situs e-commerce.
 
 ### 1.2. Data Understanding
+#### 1.2.1. Data Dimension
+Dataset ini memiliki dimensi data, yaitu
+- Jumlah baris: 12330
+- Jumlah kolom: 18 
+#### 1.2.2. Data Types and Structure
+Untuk mendapatkan ringkasan singkat tentang dataset, kami menggunakan fungsi `info()`. Hasil observasi yang didapatkan adalah sebagai berikut.
+- Dari total 18 kolom, ada 4 kolom fitur dengan tipe data yang kurang sesuai, yaitu `OperatingSystems`, `Browser`, `Region`, dan `TrafficType`, seharusnya string bukan integer, kemungkinan sudah melalui proses _label encoding_, sedangkan kolom lainnya sudah sesuai.
+- Tidak ada kolom yang memiliki nilai kosong atau _missing values_.
+- Tipe data berupa boolean (2), float (7), integer (7), dan string (2).
 
 ### 1.3. Exploratory Data Analysis
 
