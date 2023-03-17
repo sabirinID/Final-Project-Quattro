@@ -94,7 +94,7 @@ Fitur `Revenue` digunakan sebagai _target feature_ atau label kelas.
 
 ### 2.2. Feature Engineering
 
-### Stage 3. Business Insight
+## Stage 3. Business Insight
 
 - Di daerah `Region' 1 memiliki jumlah pengunjung situs web e-commerce yang terbanyak. Solusi untuk meningkatkan ketertarikan pengunjung, kita bisa melakukan promosi ke daerah-daerah yang jarang mengunjungi situs web dengan memberikan penawaran spesial, seperti gratis ongkos pengiriman (ongkir).
 - Pengunjung yang berkunjung pada _weekend_ lebih banyak dibandingkan dengan hari-hari biasa atau _weekday_, sehingga kita bisa mengadakan _event_ untuk menarik pelanggan melakukan transaksi pada _event_ tersebut.
