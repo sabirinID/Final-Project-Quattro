@@ -52,11 +52,34 @@ Dataset ini memiliki dimensi data, yaitu
 - Jumlah kolom: 18 
 #### 1.2.2. Data Types and Structure
 Untuk mendapatkan ringkasan singkat tentang dataset, kami menggunakan fungsi `info()`. Hasil observasi yang didapatkan adalah sebagai berikut.
-- Dari total 18 kolom, ada 4 kolom fitur dengan tipe data yang kurang sesuai, yaitu `OperatingSystems`, `Browser`, `Region`, dan `TrafficType`, seharusnya string bukan integer, kemungkinan sudah melalui proses _label encoding_, sedangkan kolom lainnya sudah sesuai.
+- Dari total 18 kolom, ada 4 kolom atau fitur dengan tipe data yang kurang sesuai, yaitu `OperatingSystems`, `Browser`, `Region`, dan `TrafficType`, seharusnya string bukan integer, karena kemungkinan sudah melalui proses _label encoding_, sedangkan kolom lainnya sudah sesuai.
 - Tidak ada kolom yang memiliki nilai kosong atau _missing values_.
 - Tipe data berupa boolean (2), float (7), integer (7), dan string (2).
+#### 1.2.3. Detect Missing Values
+Untuk memastikan adanya _missing values_ dalam dataset, kita menggunakan metode `isna()`.
+- Tidak ada kolom yang _null_ (bernilai None ataupun NaN).
 
-### 1.3. Exploratory Data Analysis
+### 1.3. Descriptive Statistics
+Untuk mendapatkan perincian statistik dasar dari dataset, kita menggunakan metode `describe()`.
+#### 1.3.1. Numerical Features
+Dalam fitur numerikal:
+- Ada perbedaan yang signifikan antara nilai mean dan median (P50), yaitu mean > median, karena kemungkinan dipengaruhi oleh adanya _outlier_ atau pencilan, sehingga distribusi data akan cenderung menceng ke kanan atau _positively skewed_.
+#### 1.3.2. Categorical Features
+Berikut ini nilai yang paling umum dalam fitur kategorikal, berturut-turut adalah:
+- `Month` : May (27,3%),
+- `VisitorType` : Returning_Visitor (85,6%),
+- `Weekend` : False (76,7%), dan
+- `Revenue` : False (84,5%).
+
+#### 1.3.3. Target Feature
+Fitur Revenue digunakan sebagai target feature atau label kelas.
+- Dari total 12.330 sesi, 84,5% atau 10.422 sesi merupakan **kelas negatif** yang tidak diakhiri dengan pembelian, sedangkan 15,5% sisanya atau 1.908 sesi merupakan **kelas positif** yang diakhiri dengan pembelian.
+- Dataset _imbalance_ atau tidak seimbang, karena proporsi data minoritas (dalam hal ini kelas positif) relatif rendah, dengan _degree of imbalance_: [moderate](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data/).
+- Pada saat data pre-processing, kita perlu melakukan _handling imbalance data_, seperti
+  - Oversampling: menduplikasi data minoritas
+  - Undersampling: menghapus data mayoritas
+
+### 1.4. Exploratory Data Analysis
 
 ## Stage 2. Data Preprocessing
 
