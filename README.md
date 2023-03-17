@@ -48,7 +48,7 @@ Dataset [Online Shoppers Purchasing Intention](https://archive.ics.uci.edu/ml/da
 ### 1.2. Data Understanding
 #### 1.2.1. Data Dimension
 Dataset ini memiliki dimensi data, yaitu
-- Jumlah baris: 12330
+- Jumlah baris: 12.330
 - Jumlah kolom: 18 
 #### 1.2.2. Data Types and Structure
 Untuk mendapatkan ringkasan singkat tentang dataset, kami menggunakan fungsi `info()`. Hasil observasi yang didapatkan adalah sebagai berikut.
@@ -59,10 +59,10 @@ Untuk mendapatkan ringkasan singkat tentang dataset, kami menggunakan fungsi `in
 Untuk memastikan adanya _missing values_ dalam dataset, kita menggunakan metode `isna()`.
 - Tidak ada kolom yang _null_ (bernilai None ataupun NaN).
 #### 1.2.4. Detect Duplicates
-Untuk menemukan adanya _duplicates_, kita menggunakan metode `duplicated()`. Ternyata ditemukan data duplikat sebanyak 125 baris. Walaupun dalam dataset ini ada data duplikat, kita berasumsi bahwa data tersebut merupakan data unik, yang terkait dengan sesi kunjungan pelanggan.
+Untuk menemukan adanya _duplicates_, kita menggunakan metode `duplicated()`. Ternyata ditemukan data duplikat sebanyak 125 baris. Walaupun demikian, kita berasumsi bahwa data tersebut merupakan data unik, yang terkait dengan sesi kunjungan pelanggan.
 #### 1.2.5. Unique Elements
 Untuk mencari elemen unik dalam dataset, kita menggunakan fungsi `nunique()`.
-- Fitur `Administrative_Duration`, `Informational_Duration`, dan `ProductRelated_Duration` memiliki elemen unik yang cukup banyak, sehingga kita bisa hapus fitur ini atau kita buat fitur baru `TotalPage_Duration`.
+- Fitur `Administrative_Duration`, `Informational_Duration`, dan `ProductRelated_Duration` memiliki elemen unik yang cukup banyak, sehingga kita bisa hapus fitur ini atau kita bisa buat fitur baru `TotalPage_Duration`.
 - Fitur `Administrative`, `Informational`, dan `ProductRelated` juga bisa buat fitur baru `TotalPage`.
 - Fitur `BounceRates`, `ExitRates`, dan `PageValues` akan dipertahankan.
 
@@ -79,7 +79,7 @@ Berikut ini nilai yang paling umum dalam fitur kategorikal, berturut-turut adala
 - `Revenue` : False (84,5%).
 
 #### 1.3.3. Target Feature
-Fitur Revenue digunakan sebagai target feature atau label kelas.
+Fitur `Revenue` digunakan sebagai _target feature_ atau label kelas.
 - Dari total 12.330 sesi, 84,5% atau 10.422 sesi merupakan **kelas negatif** yang tidak diakhiri dengan pembelian, sedangkan 15,5% sisanya atau 1.908 sesi merupakan **kelas positif** yang diakhiri dengan pembelian.
 - Dataset _imbalance_ atau tidak seimbang, karena proporsi data minoritas (dalam hal ini kelas positif) relatif rendah, dengan _degree of imbalance_: [moderate](https://developers.google.com/machine-learning/data-prep/construct/sampling-splitting/imbalanced-data/).
 - Pada saat data pre-processing, kita perlu melakukan _handling imbalance data_, seperti
