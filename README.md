@@ -87,8 +87,22 @@ Fitur `Revenue` digunakan sebagai _target feature_ atau label kelas.
   - Undersampling: menghapus data mayoritas
 
 ### 1.4 Univariate Analysis
+Univariate Analysis dikakukan untuk melihat distribusi data dari setiap _feature_ secara terpisah.Bisa melihat distribusi data apakah berdistribusi normal, _left skew_, atau _right skew_ dengan menggunakan kdeplot. Kemudian melihat ada berapa banyak outlier yang ada pada setiap _feature_ dengan menggunakan boxplot.
 #### 1.4.1 Data Distribution
+Dari distribusi data diatas dapat disimpulkan:
+- Sebagian besar fitur memiliki distribusi yang _positively skewed_, karena nilai mean > median.
+- Sebagian besar fitur memiliki _outlier_ atau pencilan.
+- Fitur `OperatingSystem` distribusinya multimodal (nilai mode > 2).
+- Fitur `Month` distribusinya mendekati bimodal dengan data tertinggi pada bulan Mei dan November.
+- Fitur `VisitorType` dengan nilai Returning_Visitor sangat mendominasi.
+- Fitur `Weekend` dengan nilai False mendominasi.
+- Fitur `Revenue` dengan nilai False (tidak melakukan _purchasing_) sangat mendominasi.
 
+Pada saat data pre-processing, kita perlu melakukan:
+- Penghapusan _outlier_ pada setiap fitur bisa menggunakan IQR atau Z-Score.
+- Melakukan transformasi fitur dengan _Log Transformation_, karena terdapat banyak fitur yang memiliki sebaran _right skew_ (Long Right Tailed)
+- Melakukan _Feature Encoding_ untuk fitur `Month`, `Weekend`, dan `Revenue` menggunakan _Label Encoding_, sedangkan untuk fitur `VisitorType` menggunakan _One Hot Encoding_, karena terdapat nilai > 2 dan bukan tipe ordinal.
+- Melakukan _Imbalance Class_ untuk fitur `Revenue`, karena fitur ini merupakan target yang mempunyai ketimpangan data yang signifikan.
 ### 1.5 Multivariate Analysis
 Untuk melakukan Multivariate Analysis bisa menggunakan pair plot. Pair plot digunakan untuk menganalisa antar dua variabel pada data (bivariate analysis).
 Pada bagian scatter plot dapat dilihat sebaran data dari dua variabel yang dipilih. Parameter hue bisa ditambahkan untuk mempertegas sebaran scatter plot setiap fitur terhadap target. dari Multivariate Analysis yang dilakukan didapatkan insight:
