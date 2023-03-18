@@ -89,7 +89,7 @@ Fitur `Revenue` digunakan sebagai _target feature_ atau label kelas.
 ### 1.4 Univariate Analysis
 Univariate Analysis dikakukan untuk melihat distribusi data dari setiap _feature_ secara terpisah.Bisa melihat distribusi data apakah berdistribusi normal, _left skew_, atau _right skew_ dengan menggunakan kdeplot. Kemudian melihat ada berapa banyak outlier yang ada pada setiap _feature_ dengan menggunakan boxplot.
 #### 1.4.1 Data Distribution
-Dari distribusi data diatas dapat disimpulkan:
+Dari distribusi data dapat disimpulkan:
 - Sebagian besar fitur memiliki distribusi yang _positively skewed_, karena nilai mean > median.
 - Sebagian besar fitur memiliki _outlier_ atau pencilan.
 - Fitur `OperatingSystem` distribusinya multimodal (nilai mode > 2).
@@ -98,7 +98,7 @@ Dari distribusi data diatas dapat disimpulkan:
 - Fitur `Weekend` dengan nilai False mendominasi.
 - Fitur `Revenue` dengan nilai False (tidak melakukan _purchasing_) sangat mendominasi.
 
-Pada saat data pre-processing, kita perlu melakukan:
+Pada saat data pre-processing perlu dilakukan:
 - Penghapusan _outlier_ pada setiap fitur bisa menggunakan IQR atau Z-Score.
 - Melakukan transformasi fitur dengan _Log Transformation_, karena terdapat banyak fitur yang memiliki sebaran _right skew_ (Long Right Tailed)
 - Melakukan _Feature Encoding_ untuk fitur `Month`, `Weekend`, dan `Revenue` menggunakan _Label Encoding_, sedangkan untuk fitur `VisitorType` menggunakan _One Hot Encoding_, karena terdapat nilai > 2 dan bukan tipe ordinal.
