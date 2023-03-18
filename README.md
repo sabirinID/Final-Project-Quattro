@@ -91,7 +91,7 @@ Fitur `Revenue` digunakan sebagai _target feature_ atau label kelas.
 
 ### 1.5 Multivariate Analysis
 Untuk melakukan Multivariate Analysis bisa menggunakan pair plot. Pair plot digunakan untuk menganalisa antar dua variabel pada data (bivariate analysis).
-Pada bagian scatter plot dapat dilihat sebaran data dari dua variabel yang dipilih. Parameter hue bisa ditambahkan untuk mempertegas sebaran scatter plot setiap fitur terhadap target. dari Multivariate yang dilakukan didapatkan insight:
+Pada bagian scatter plot dapat dilihat sebaran data dari dua variabel yang dipilih. Parameter hue bisa ditambahkan untuk mempertegas sebaran scatter plot setiap fitur terhadap target. dari Multivariate Analysis yang dilakukan didapatkan insight:
 - Hampir tidak ada scatter plot dengan warna yang terpisah dengan baik.
 - Fitur dengan pemisahan warna yang kurang baik bisa berpengaruh pada tingkat akurasi model.
 - Scatter plot dengan sebaran warna yang terpisah mengindikasikan bahwa dataset memiliki kombinasi fitur yang baik.
