@@ -118,10 +118,13 @@ Untuk mencari korelasi data secara mudah juga bisa menggunakan correlation heatm
 
 
 ## Stage 2. Data Preprocessing
+Tahap Pengerjaan
 
 ### 2.1. Data Cleansing
+Tahap Pengerjaan
 
 ### 2.2. Feature Engineering
+Tahap Pengerjaan
 
 ## Stage 3. Business Insight
 
