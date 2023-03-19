@@ -143,9 +143,6 @@ Tahap Pengerjaan
 Tahap Pengerjaan
 
 ## Stage 3. Business Insight
-
-# 3. Business Insights
-
 - Di daerah `Region` 1 memiliki jumlah pengunjung situs web e-commerce yang terbanyak. Solusi untuk meningkatkan ketertarikan pengunjung, kita bisa melakukan promosi ke daerah-daerah yang jarang mengunjungi situs web dengan memberikan penawaran spesial, seperti gratis ongkos pengiriman (ongkir).
 
 - Pengunjung yang berkunjung pada _weekend_ lebih sedikit dibandingkan dengan hari-hari biasa atau _weekday_, sehingga kita bisa mengadakan _event_ untuk menarik pelanggan melakukan transaksi pada waktu _weekend_.
