@@ -103,6 +103,7 @@ Pada saat data pre-processing perlu dilakukan:
 - Melakukan transformasi fitur dengan _Log Transformation_, karena terdapat banyak fitur yang memiliki sebaran _right skew_ (Long Right Tailed)
 - Melakukan _Feature Encoding_ untuk fitur `Month`, `Weekend`, dan `Revenue` menggunakan _Label Encoding_, sedangkan untuk fitur `VisitorType` menggunakan _One Hot Encoding_, karena terdapat nilai > 2 dan bukan tipe ordinal.
 - Melakukan _Imbalance Class_ untuk fitur `Revenue`, karena fitur ini merupakan target yang mempunyai ketimpangan data yang signifikan.
+
 ### 1.5 Multivariate Analysis
 Untuk melakukan Multivariate Analysis bisa menggunakan pair plot. Pair plot digunakan untuk menganalisa antar dua variabel pada data (bivariate analysis).
 Pada bagian scatter plot dapat dilihat sebaran data dari dua variabel yang dipilih. Parameter hue bisa ditambahkan untuk mempertegas sebaran scatter plot setiap fitur terhadap target. dari Multivariate Analysis yang dilakukan didapatkan insight:
@@ -112,8 +113,12 @@ Pada bagian scatter plot dapat dilihat sebaran data dari dua variabel yang dipil
 - Satu-satunya kolom yang cukup baik untuk dijadikan fitur adalah PageValues yang menunjukkan pemisahan warna secara jelas.
 
 #### 1.5.1 Data Correlation
-Scatter plot menunjukkan perbedaan sebaran warna yang cukup mencolok, hal ini menandakan bahwa PageValues dengan Revenue memiliki korelasi yang cukup baik. untuk memperjelas pola hubungan PageValues dengan Revenue bisa digunakan point plot sehingga dapat diketahui bahwa Semakin tinggi nilai PageValues berbanding lurus dengan semakin tingginya nilai Revenue. PageValues dan Revenue memiliki pola hubungan positive linear association yang membentuk pola garis lurus berdasarkan Pearson Correlation.
-Untuk mencari korelasi data secara mudah juga bisa menggunakan correlation heatmap. Fitur PageValues dan Revenue berkorelasi sedang (0,49), karena ketika tidak ada pembelian yang dilakukan, jumlah sesi dengan Page Values ​​= 0 relatif tinggi, yaitu sebanyak 9.230 sesi. Fitur BounceRates dan ExitRates berkorelasi tinggi (0,91), karena ketika Bounce Rate meningkat, Exit Rate juga meningkat berdasarkan hasil perhitungan oleh Google Analytics, sehingga kita memilih salah satu fitur, yaitu yang memiliki correlation lebih besar (ExitRates), atau bisa juga melakukan PCA. Korelasi antara durasi atau waktu yang dihabiskan pelanggan di halaman tertentu terhadap jumlahnya terlihat cukup jelas. sehingga dapat disimpulkan bahwa untuk menghasilkan Revenue, maka harus memiliki Bounce Rates yang rendah, Exit Rates yang rendah, dan Page Values yang tinggi.
+- Scatter plot menunjukkan perbedaan sebaran warna yang cukup mencolok, hal ini menandakan bahwa PageValues dengan Revenue memiliki korelasi yang cukup baik.
+- Untuk memperjelas pola hubungan PageValues dengan Revenue bisa digunakan point plot sehingga dapat diketahui bahwa Semakin tinggi nilai PageValues berbanding lurus dengan semakin tingginya nilai Revenue. 
+- PageValues dan Revenue memiliki pola hubungan positive linear association yang membentuk pola garis lurus berdasarkan Pearson Correlation.
+- Untuk mencari korelasi data secara mudah juga bisa menggunakan correlation heatmap. Fitur PageValues dan Revenue berkorelasi sedang (0,49), karena ketika tidak ada pembelian yang dilakukan, jumlah sesi dengan Page Values ​​= 0 relatif tinggi, yaitu sebanyak 9.230 sesi. 
+- Fitur BounceRates dan ExitRates berkorelasi tinggi (0,91), karena ketika Bounce Rate meningkat, Exit Rate juga meningkat berdasarkan hasil perhitungan oleh Google Analytics, sehingga kita memilih salah satu fitur, yaitu yang memiliki correlation lebih besar (ExitRates), atau bisa juga melakukan PCA. 
+- Korelasi antara durasi atau waktu yang dihabiskan pelanggan di halaman tertentu terhadap jumlahnya terlihat cukup jelas. sehingga dapat disimpulkan bahwa untuk menghasilkan Revenue, maka harus memiliki Bounce Rates yang rendah, Exit Rates yang rendah, dan Page Values yang tinggi.
 
 
 
