@@ -46,6 +46,37 @@ Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Sci
 Dataset [Online Shoppers Purchasing Intention](https://archive.ics.uci.edu/ml/datasets/Online+Shoppers+Purchasing+Intention+Dataset/) merupakan dataset yang dibentuk secara khusus, sehingga setiap sesi akan dimiliki oleh pelanggan yang berbeda selama periode 1 tahun. Dataset ini terdiri dari 12.330 baris dan 18 kolom fitur, setiap baris berisi data yang berkaitan dengan sesi kunjungan (waktu yang dihabiskan) pelanggan pada website e-commerce.
 
 ### 1.2. Data Understanding
+#### 1.2.0. Features Definition
+##### 1.2.0.1. Numerical Features
+| Feature Name              | Feature Description                                                |
+|:--------------------------|:-------------------------------------------------------------------|
+| `Administrative`          | Number of times the user visited the administrative section        |
+| `Administrative_Duration` | Total time the user spent in the administrative section            |
+| `Informational`           | Number of times the user visited the informational section         |
+| `Informational_Duration`  | Total time the user spent in the informational section             |
+| `ProductRelated`          | Number of times the user visited the related products section      |
+| `ProductRelated_Duration` | Total time the user spent in the related products section          |
+| `BounceRates`             | Average bounce rate value of the pages visited by the visitor      |
+| `ExitRates`	              | Average exit rate value of the pages visited by the visitor        |
+| `PageValues`              | Average page value of the pages visited by the visitor             |
+| `SpecialDay`              | The proximity to a special date                                    |
+
+##### 1.2.0.2. Categorical Features
+| Feature Name              | Feature Description                                                |
+|:--------------------------|:-------------------------------------------------------------------|
+| `Month`                   | Month of the visit to the website                                  |
+| `OperatingSystems`        | Type of operating system                                           |
+| `Browser`                 | Name of the web browser                                            |
+| `Region`                  | Visitor's geographic region                                        |
+| `TrafficType`             | Type of web traffic                                                |
+| `VisitorType`             | Type of visitor as "New Visitor", "Returning Visitor", and "Other" |
+| `Weekend`                 | "True" indicates that it is a weekend day                          |
+
+##### 1.2.0.3. Target Feature
+| Feature Name              | Feature Description                                                |
+|:--------------------------|:-------------------------------------------------------------------|
+| `Revenue`                 | "True" indicates that the visitor has purchased                    |
+
 #### 1.2.1. Data Dimension
 Dataset ini memiliki dimensi data, yaitu
 - Jumlah baris: 12.330
