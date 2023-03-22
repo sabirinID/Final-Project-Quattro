@@ -61,6 +61,11 @@ Dataset [Online Shoppers Purchasing Intention](https://archive.ics.uci.edu/ml/da
 | `PageValues`              | Average page value of the pages visited by the visitor             |
 | `SpecialDay`              | The proximity to a special date                                    |
 
+Notes:
+- For all pageviews to the page, [Exit Rate](https://support.google.com/analytics/answer/2525491?hl=en&ref_topic=6156780) is the percentage that were the last in the session.
+- For all sessions that start with the page, [Bounce Rate](https://support.google.com/analytics/answer/2525491?hl=en&ref_topic=6156780) is the percentage that were the only one of the session.
+- [Page Value](https://support.google.com/analytics/answer/2695658?hl=en&ref_topic=6156780) is the average value for a page that a user visited before completing an Ecommerce transaction.
+
 ##### 1.2.0.2. Categorical Features
 | Feature Name              | Feature Description                                                |
 |:--------------------------|:-------------------------------------------------------------------|
