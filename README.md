@@ -178,11 +178,14 @@ Tahap Pengerjaan
 ### 2.2. Feature Engineering
 #### 2.2.1 Feature Checking
 #### 2.2.2 Feature Selection
-Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fature yang memiliki score tertinggi, yaitu:
-- PageValues dengan score paling dominan yaitu 1990.177
-- Month dengan score 276.8. dapat memprediksi karena bisa melihat bulan mana yang purchasing ratenya tinggi.
-- VisitorType_New_Visitor dengan score 96,99. dapat memprediksi karena tipe pelanggan baru memiliki purchasing rate paling tinggi.
-- ExitRates dan BounceRates dapat memprediksi customer itu melakukan purchasing atau tidaknya jika ExitRates atau BounceRates yang rendah akan terjadi PurchasingRate yang tinggi.
+Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fitur yang memiliki score tertinggi, yaitu:
+- PageValues memiliki score paling dominan, yaitu 463,2.
+- VisitorType_New_Visitor dan VisitorType_Returning_Visitor dapat memprediksi, karena tipe pelanggan dapat memengaruhi Purchase Rate.
+- Administrative_Duration dan Informational_Duration dapat memprediksi, karena ketika makin lama durasi atau waktu yang dihabiskan pada suatu halaman, maka makin besar kemungkinan terjadi Purchase Rate.
+- ExitRates dan BounceRates dapat memprediksi pelanggan itu melakukan purchase atau tidak, karena ketika ExitRates atau BounceRates yang rendah akan terjadi Purchase Rate yang tinggi.
+- Administrative, Informational, dan ProductRelated dapat memprediksi, karena ketika makin banyak jumlah halaman yang dikunjungi, maka makin besar kemungkinan terjadi Purchase Rate.
+
+kemudian kami mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
 
 #### 2.2.3 Feature Extraction
 
