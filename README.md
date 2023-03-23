@@ -176,7 +176,15 @@ Tahap Pengerjaan
 Tahap Pengerjaan
 
 ### 2.2. Feature Engineering
-Tahap Pengerjaan
+#### 2.2.1 Feature Checking
+#### 2.2.2 Feature Selection
+Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fature yang memiliki score tertinggi, yaitu:
+- PageValues dengan score paling dominan yaitu 1990.177
+- Month dengan score 276.8. dapat memprediksi karena bisa melihat bulan mana yang purchasing ratenya tinggi.
+- VisitorType_New_Visitor dengan score 96,99. dapat memprediksi karena tipe pelanggan baru memiliki purchasing rate paling tinggi.
+- ExitRates dan BounceRates dapat memprediksi customer itu melakukan purchasing atau tidaknya jika ExitRates atau BounceRates yang rendah akan terjadi PurchasingRate yang tinggi.
+
+#### 2.2.3 Feature Extraction
 
 ## Stage 3. Business Insight
 - Di daerah `Region` 1 memiliki jumlah pengunjung situs web e-commerce yang terbanyak. Solusi untuk meningkatkan ketertarikan pengunjung, kita bisa melakukan promosi ke daerah-daerah yang jarang mengunjungi situs web dengan memberikan penawaran spesial, seperti gratis ongkos pengiriman (ongkir).
