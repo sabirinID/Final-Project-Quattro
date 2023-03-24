@@ -212,6 +212,7 @@ Tahap Pengerjaan
 | `ExitRates`               | 1.690123                                                    |
 | `PageValues`              | 1.919541                                                    |
 | `Weekend`                 | 1.246781                                                    |
+
 - Setelah itu, kami menggunakan Min Max Scaler untuk menormalisasi data numerikal dalam rentang 0–1.
 
 |	                            | count	  |    mean	  |    std	  | min	| 25%	      | 50%	7     |5%	        | max |
