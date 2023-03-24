@@ -176,8 +176,10 @@ Tahap Pengerjaan
 ### 2.1.1 Handle Missing Values
 - Pada saat dilakukan handle missing values didapatkan jumlah nilai pada dataset adalah 0, sehingga dapat disimpulkan dataset ini bersih karena tidak memiliki nilai kosong
 ### 2.1.2 Handle Duplicated Data
-- Pada saat dilakukan Handle ducpliated data didapatkan jumlah duplikat 757 baris yang sebelumnya hanya 125 baris. Hal ini disebabkan sesuah dilakukan drop beberapa fitur
+- Pada saat dilakukan Handle ducpliated data didapatkan jumlah duplikat 757 baris yang sebelumnya hanya 125 baris. Hal ini disebabkan sesudah dilakukan drop beberapa fitur
 ### 2.1.3 Handle Outliers
+- Sebelum melakukan handle outliers, kita melakukan splitting menjadi train dan test set yang kemudian kita hanya melakukan handle outliers pada data train dan selanjutnya dilakukan evaluasi performa model pada data test
+- Pada saat dilakukan handle outliers pada data train didapatkan X-train memiliki jumlah baris sebelum dilakukan filter outlier sebanyak 9.864 baris, sedangkan sesudah dilakukan filter outlier dihasilkan 8.377 baris.
 ### 2.1.4 Feature Transformation
 ### 2.1.5 Feature Encoding
 -Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
