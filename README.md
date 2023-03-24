@@ -249,6 +249,17 @@ Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fitur
 kemudian kami mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
 
 #### 2.2.3 Feature Extraction
+Kami melakukan PCA (Principal Component Analysis) dengan tujuan mereduksi dimensi dengan membentuk feature baru dengan menggabungkan feature-feature yang sudah ada.
+- `TotalPage_view` sebuah featur baru yang berisi informasi total halaman yang dilihat customer selama mengunjungi web.
+- `TotalPage_time` sebuah featur baru yang berisi informasi total waktu yang dihabiskan customer dalam mengunjungi web.
+
+Untuk mempermudah ML dalam memprediksi, kami mencoba untuk menggali informasi data yang nantinya akan dibuat feature baru.
+- `ProductView_Percent` merupakan feature yang berisi informasi persentase customer dalam melihat produk yang sejenis.
+- `ProductTime_Percent` merupakan feature yang berisi informasi persentase customer dalam menghabiskan waktu untuk melihat produk yang sejenis.
+- `Average_ProductTime` merupakan feature yang berisi informasi rata-rata waktu yang dihabiskan customer dalam melihat produk sejenis.
+- `PageValues_x_BounceRates` merupakan feature yang berisi informasi keterkaitan antara PageValues dan BounceRate, dimana jika nilainya semakin besar maka semakin baik sebuah halaman tersebut.
+- `PageValues_per_ProductView` merupakan feature yang berisi informasi rasio antara nilai halaman dan jumlah halaman produk sejenis, jika semakin tinggi nilainya maka bisa dikatakan halaman produk sejenis itu cenderung menciptakan transaksi.
+- `PageValues_per_ProductTime` merupakan feature yang berisi informasi rasio antara nilai halaman dan waktu yang dihabiskan untuk melihat produk sejenis, jika semakin tinggi nilainya maka customer tertarik pada produk yang ditawarkan dan cenderung melakukan transaksi setelah menghabiskan di halaman produk yang cukup lama.
 
 ## Stage 3. Business Insight
 - Di daerah `Region` 1 memiliki jumlah pengunjung situs web e-commerce yang terbanyak. Solusi untuk meningkatkan ketertarikan pengunjung, kita bisa melakukan promosi ke daerah-daerah yang jarang mengunjungi situs web dengan memberikan penawaran spesial, seperti gratis ongkos pengiriman (ongkir).
