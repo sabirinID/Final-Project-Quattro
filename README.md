@@ -183,6 +183,7 @@ Tahap Pengerjaan
 - Pada saat dilakukan handle outliers pada data train didapatkan X-train memiliki jumlah baris sebelum dilakukan filter outlier sebanyak 9.864 baris, sedangkan sesudah dilakukan filter outlier dihasilkan 8.377 baris.
 ### 2.1.4 Feature Transformation
 - Kita menggunakan Logarithmic Transformation untuk mengubah fitur numerikal terdistribusi menceng ke kanan menjadi terdistribusi lebih normal.
+
 | Feature Transformation    | Skewness                                                    |
 |:--------------------------|:------------------------------------------------------------|
 | `Administrative`          | 1.485398                                                    |
@@ -212,6 +213,7 @@ Tahap Pengerjaan
 | `PageValues`              | 1.919541                                                    |
 | `Weekend`                 | 1.246781                                                    |
 - Setelah itu, kami menggunakan Min Max Scaler untuk menormalisasi data numerikal dalam rentang 0–1.
+
 |	                            | count	  |    mean	  |    std	  | min	| 25%	      | 50%	7     |5%	        | max |
 |:----------------------------|:--------------------------------------------------------------------------------|
 | `Administrative`	          | 8377.0	| 0.292301	| 0.315649	| 0.0	| 0.000000	| 0.270238	| 0.540476	| 1.0 |
