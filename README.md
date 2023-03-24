@@ -178,14 +178,51 @@ Tahap Pengerjaan
 ### 2.1.2 Handle Duplicated Data
 - Pada saat dilakukan Handle ducpliated data didapatkan jumlah duplikat 757 baris yang sebelumnya hanya 125 baris. Hal ini disebabkan sesudah dilakukan drop beberapa fitur
 ### 2.1.3 Handle Outliers
-- Sebelum melakukan handle outliers, kita melakukan splitting menjadi train dan test set yang kemudian kita hanya melakukan handle outliers pada data train dan selanjutnya dilakukan evaluasi performa model pada data test
+- Sebelum melakukan handle outliers, kita melakukan splitting menjadi train dan test set yang kemudian kita hanya melakukan handle outliers pada data train dan selanjutnya dilakukan evaluasi performa model pada data test.
+- kita menggunakan metode Z-Score untuk menghapus data outlier ekstrem pada X_train set.
 - Pada saat dilakukan handle outliers pada data train didapatkan X-train memiliki jumlah baris sebelum dilakukan filter outlier sebanyak 9.864 baris, sedangkan sesudah dilakukan filter outlier dihasilkan 8.377 baris.
 ### 2.1.4 Feature Transformation
 - Kita menggunakan Logarithmic Transformation untuk mengubah fitur numerikal terdistribusi menceng ke kanan menjadi terdistribusi lebih normal.
-- Kita dapat melihat bahwa semua fitur numerikal memiliki skewness yang tinggi (nilai absolut dari skewness > 1), sehingga perlu di-log transformasi.
+| Feature Transformation    | Skewness                                                    |
+|:--------------------------|:------------------------------------------------------------|
+| `Administrative`          | 1.485398                                                    |
+| `Administrative_Duration` | 2.398119                                                    |
+| `Informational`           | 2.727807                                                    |
+| `Informational_Duration`  | 4.828783                                                    |
+| `ProductRelated`          | 1.981740                                                    |
+| `ProductRelated_Duration` | 2.018775                                                    |
+| `BounceRates`             | 3.087599                                                    |
+| `ExitRates`               | 1.787320                                                    |
+| `PageValues`              | 3.203185                                                    |
+| `Weekend`                 | 1.246781                                                    |
+
+- Dari tabel di atas dapat dilihat bahwa semua fitur numerikal memiliki skewness yang tinggi (nilai absolut dari skewness > 1), sehingga perlu di-log transformasi.
 - Kita menggunakan fungsi np.log untuk melakukan log transformasi pada variabel, dan menambahkan 1 untuk menghindari pembagian dengan nol. Setelah transformasi selesai, kita dapat memeriksa skewness kembali untuk memastikan bahwa nilai skewness sudah berkurang.
+| Feature Transformation    | Skewness                                                    |
+|:--------------------------|:------------------------------------------------------------|
+| `Administrative`          | 0.528311                                                    |
+| `Administrative_Duration` | 0.233996                                                    |
+| `Informational`           | 2.110203                                                    |
+| `Informational_Duration`  | 2.168179                                                    |
+| `ProductRelated`          | 0.090613                                                    |
+| `ProductRelated_Duration` | 0.897208                                                    |
+| `BounceRates`             | 2.964477                                                    |
+| `ExitRates`               | 1.690123                                                    |
+| `PageValues`              | 1.919541                                                    |
+| `Weekend`                 | 1.246781                                                    |
 - Setelah itu, kami menggunakan Min Max Scaler untuk menormalisasi data numerikal dalam rentang 0–1.
-- 
+|	                          | count	  |    mean	  |    std	  | min	| 25%	      | 50%	7     |5%	        | max |
+|:--------------------------|:--------------------------------------------------------------------------------|
+|Administrative	            | 8377.0	| 0.292301	| 0.315649	| 0.0	| 0.000000	| 0.270238	| 0.540476	| 1.0 |
+|Administrative_Duration	  | 8377.0	| 0.343896	| 0.353708	| 0.0	| 0.000000	| 0.303012	| 0.687338	| 1.0 |
+|Informational	            | 8377.0	| 0.110753	| 0.250974	| 0.0	| 0.000000	| 0.000000	| 0.000000	| 1.0 |
+|Informational_Duration	    | 8377.0	| 0.104560	| 0.250072	| 0.0	| 0.000000	| 0.000000	| 0.000000	| 1.0 |
+|ProductRelated	            | 8377.0	| 0.569338	| 0.187310	| 0.0	| 0.430840	| 0.577356	| 0.708042	| 1.0 |
+|ProductRelated_Duration	  | 8377.0	| 0.699615	| 0.159284	| 0.0	| 0.607905	| 0.723116	| 0.814775	| 1.0 |
+|BounceRates	              | 8377.0	| 0.075369	| 0.137139	| 0.0	| 0.000000	| 0.007575	| 0.092018	| 1.0 |
+|ExitRates	                | 8377.0	| 0.198254	| 0.168897	| 0.0	| 0.082879	| 0.145081	| 0.255714	| 1.0 |
+|PageValues	                | 8377.0	| 0.127191	| 0.277474	| 0.0	| 0.000000	| 0.000000	| 0.000000	| 1.0 |
+
 ### 2.1.5 Feature Encoding
 -Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
 - Terdapat 18 Fitur sebelum encoding
