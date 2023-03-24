@@ -181,6 +181,11 @@ Tahap Pengerjaan
 - Sebelum melakukan handle outliers, kita melakukan splitting menjadi train dan test set yang kemudian kita hanya melakukan handle outliers pada data train dan selanjutnya dilakukan evaluasi performa model pada data test
 - Pada saat dilakukan handle outliers pada data train didapatkan X-train memiliki jumlah baris sebelum dilakukan filter outlier sebanyak 9.864 baris, sedangkan sesudah dilakukan filter outlier dihasilkan 8.377 baris.
 ### 2.1.4 Feature Transformation
+- Kita menggunakan Logarithmic Transformation untuk mengubah fitur numerikal terdistribusi menceng ke kanan menjadi terdistribusi lebih normal.
+- Kita dapat melihat bahwa semua fitur numerikal memiliki skewness yang tinggi (nilai absolut dari skewness > 1), sehingga perlu di-log transformasi.
+- Kita menggunakan fungsi np.log untuk melakukan log transformasi pada variabel, dan menambahkan 1 untuk menghindari pembagian dengan nol. Setelah transformasi selesai, kita dapat memeriksa skewness kembali untuk memastikan bahwa nilai skewness sudah berkurang.
+- Setelah itu, kami menggunakan Min Max Scaler untuk menormalisasi data numerikal dalam rentang 0–1.
+- 
 ### 2.1.5 Feature Encoding
 -Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
 - Terdapat 18 Fitur sebelum encoding
