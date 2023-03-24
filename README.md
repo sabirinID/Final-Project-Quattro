@@ -186,6 +186,9 @@ Tahap Pengerjaan
 - Terdapat 18 Fitur sebelum encoding
 - -Setelah Encoding kita mengerluarkan beberapa fitur seperti Special Day,Month,Operating System,Browser,region,Traffic type dan untuk visitor type kita mengubah menjadi 3 fitur yaitu 'VisitorType_New_Visitor', 'VisitorType_Other', dan 'VisitorType_Returning_Visitor'
 ### 2.1.6 Handle Class Imbalance
+Kami menggunakan metode Random Under-Sampling untuk menghandle fitur target yang imbalance dengan cara mengurangi jumlah sample pada majority class sehingga setara dengan minority class.
+- Dari proses pengerjaan yang kami lakukan, kami menemukan bahwa jumlah pelanggan yang melakukan transaksi hanya 1159 dibanding yang tidak melakukan transaksi 7218.
+- Setelah melakukan proses handling terhadap imbalance class, data yang melakukan transaksi dan tidak masing-masing berjumlah 1159
 
 ### 2.2. Feature Engineering
 #### 2.2.1 Feature Checking
