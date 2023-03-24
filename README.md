@@ -247,7 +247,9 @@ Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fitur
 - ExitRates dan BounceRates dapat memprediksi pelanggan itu melakukan purchase atau tidak, karena ketika ExitRates atau BounceRates yang rendah akan terjadi Purchase Rate yang tinggi.
 - Administrative, Informational, dan ProductRelated dapat memprediksi, karena ketika makin banyak jumlah halaman yang dikunjungi, maka makin besar kemungkinan terjadi Purchase Rate.
 
-kemudian kami mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
+selain itu kami juga mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
+
+kemudian dari hasil beberapa metode feature selection tersebut kami mengambil ... feature, yaitu ...
 
 #### 2.2.3 Feature Extraction
 Kami melakukan PCA (Principal Component Analysis) dengan tujuan mereduksi dimensi dengan membentuk feature baru dengan menggabungkan feature-feature yang sudah ada.
