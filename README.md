@@ -198,6 +198,7 @@ Tahap Pengerjaan
 
 - Dari tabel di atas dapat dilihat bahwa semua fitur numerikal memiliki skewness yang tinggi (nilai absolut dari skewness > 1), sehingga perlu di-log transformasi.
 - Kita menggunakan fungsi np.log untuk melakukan log transformasi pada variabel, dan menambahkan 1 untuk menghindari pembagian dengan nol. Setelah transformasi selesai, kita dapat memeriksa skewness kembali untuk memastikan bahwa nilai skewness sudah berkurang.
+
 | Feature Transformation    | Skewness                                                    |
 |:--------------------------|:------------------------------------------------------------|
 | `Administrative`          | 0.528311                                                    |
