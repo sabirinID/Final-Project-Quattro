@@ -174,7 +174,9 @@ Tahap Pengerjaan
 
 ### 2.1. Data Cleansing
 ### 2.1.1 Handle Missing Values
+- Pada saat dilakukan handle missing values didapatkan jumlah nilai pada dataset adalah 0, sehingga dapat disimpulkan dataset ini bersih karena tidak memiliki nilai kosong
 ### 2.1.2 Handle Duplicated Data
+- Pada saat dilakukan Handle ducpliated data didapatkan jumlah duplikat 757 baris yang sebelumnya hanya 125 baris. Hal ini disebabkan sesuah dilakukan drop beberapa fitur
 ### 2.1.3 Handle Outliers
 ### 2.1.4 Feature Transformation
 ### 2.1.5 Feature Encoding
