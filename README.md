@@ -184,7 +184,7 @@ Tahap Pengerjaan
 ### 2.1.4 Feature Transformation
 - Kita menggunakan Logarithmic Transformation untuk mengubah fitur numerikal terdistribusi menceng ke kanan menjadi terdistribusi lebih normal.
 
-| Feature Transformation    | Skewness                                                    |
+|                           | Skewness                                                    |
 |:--------------------------|:------------------------------------------------------------|
 | `Administrative`          | 1.485398                                                    |
 | `Administrative_Duration` | 2.398119                                                    |
