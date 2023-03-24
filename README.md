@@ -173,7 +173,15 @@ Dari korelasi data dapat disimpulkan bahwa:
 Tahap Pengerjaan
 
 ### 2.1. Data Cleansing
-Tahap Pengerjaan
+### 2.1.1 Handle Missing Values
+### 2.1.2 Handle Duplicated Data
+### 2.1.3 Handle Outliers
+### 2.1.4 Feature Transformation
+### 2.1.5 Feature Encoding
+-Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
+- Terdapat 18 Fitur sebelum encoding
+- -Setelah Encoding kita mengerluarkan beberapa fitur seperti Special Day,Month,Operating System,Browser,region,Traffic type dan untuk visitor type kita mengubah menjadi 3 fitur yaitu 'VisitorType_New_Visitor', 'VisitorType_Other', dan 'VisitorType_Returning_Visitor'
+### 2.1.6 Handle Class Imbalance
 
 ### 2.2. Feature Engineering
 #### 2.2.1 Feature Checking
