@@ -95,7 +95,7 @@ Untuk mendapatkan ringkasan singkat tentang dataset, kami menggunakan fungsi `in
 Untuk memastikan adanya _missing values_ dalam dataset, kita menggunakan metode `isna()`.
 - Tidak ada kolom yang _null_ (bernilai None ataupun NaN).
 #### 1.2.4. Detect Duplicates
-Untuk menemukan adanya _duplicates_, kita menggunakan metode `duplicated()`. Ternyata ditemukan data duplikat sebanyak 125 baris. Walaupun demikian, kita berasumsi bahwa data tersebut merupakan data unik, yang terkait dengan sesi kunjungan pelanggan.
+Untuk menemukan adanya _duplicates_, kita menggunakan metode `duplicated()`. Ternyata ditemukan data duplikat sebanyak 127 baris. Walaupun demikian, kita berasumsi bahwa data tersebut merupakan data unik, yang terkait dengan sesi kunjungan pelanggan.
 #### 1.2.5. Unique Elements
 Untuk mencari elemen unik dalam dataset, kita menggunakan fungsi `nunique()`.
 - Fitur `Administrative_Duration`, `Informational_Duration`, dan `ProductRelated_Duration` memiliki elemen unik atau kategori yang cukup banyak, sehingga kita bisa melakukan
@@ -132,9 +132,9 @@ Fitur `Revenue` digunakan sebagai _target feature_ atau label kelas.
   - Undersampling: menghapus data mayoritas, atau
   - Class weight.
 
-### 1.4 Univariate Analysis
+### 1.4. Univariate Analysis
 _Univariate analysis_ dilakukan untuk melihat distribusi data dari setiap fitur secara terpisah. Bisa melihat distribusi data apakah berdistribusi normal, _left skew_, atau _right skew_ dengan menggunakan kdeplot. Kemudian melihat ada berapa banyak _outlier_ yang ada pada setiap fitur dengan menggunakan boxplot.
-#### 1.4.1 Data Distribution
+#### 1.4.1. Data Distribution
 Dari distribusi data dapat disimpulkan bahwa:
 - Sebagian besar fitur memiliki distribusi yang _positively skewed_, karena nilai mean > median.
 - Sebagian besar fitur memiliki _outlier_ atau pencilan.
@@ -152,7 +152,7 @@ Pada saat data pre-processing, kita perlu:
 - Melakukan _Feature Encoding_ untuk fitur `Month`, `Weekend`, dan `Revenue` menggunakan _Label Encoding_, sedangkan untuk fitur `VisitorType` menggunakan _One Hot Encoding_, karena terdapat > 2 kategori dan bukan tipe ordinal.
 - Melakukan _Handling Imbalanced Data_ untuk fitur `Revenue`, karena fitur ini merupakan target yang mempunyai ketimpangan data yang signifikan.
 
-### 1.5 Multivariate Analysis
+### 1.5. Multivariate Analysis
 Untuk melakukan _multivariate analysis_ bisa menggunakan pairplot. Pairplot digunakan untuk menganalisis antara dua variabel pada data (bivariate analysis).
 Pada bagian scatterplot dapat dilihat sebaran data dari dua variabel yang dipilih. Parameter _hue_ bisa ditambahkan untuk mempertegas sebaran scatterplot setiap fitur terhadap target. Hasil observai didapatkan, antara lain:
 - Hampir tidak ada scatterplot dengan warna yang terpisah dengan baik.
@@ -160,7 +160,7 @@ Pada bagian scatterplot dapat dilihat sebaran data dari dua variabel yang dipili
 - Scatterplot dengan sebaran warna yang terpisah mengindikasikan bahwa dataset memiliki kombinasi fitur yang baik.
 - Satu-satunya kolom yang cukup baik untuk dijadikan fitur adalah `PageValues` yang menunjukkan pemisahan warna secara jelas.
 
-#### 1.5.1 Data Correlation
+#### 1.5.1. Data Correlation
 Dari korelasi data dapat disimpulkan bahwa:
 - Dari scatterplot bisa dilihat perbedaan sebaran warna yang cukup mencolok, hal ini menunjukkan bahwa `PageValues` dengan `Revenue` memiliki korelasi yang cukup baik.
 - Untuk memperjelas pola hubungan `PageValues` dengan `Revenue` bisa digunakan pointplot, tingginya nilai `PageValues` berbanding lurus dengan naiknya nilai `Revenue`, sehingga fitur `PageValues` harus dipertahankan.
@@ -173,18 +173,18 @@ Dari korelasi data dapat disimpulkan bahwa:
 Tahap Pengerjaan
 
 ### 2.1. Data Cleansing
-### 2.1.1 Handle Missing Values
+### 2.1.1. Handle Missing Values
 - Pada saat dilakukan handle missing values didapatkan jumlah nilai pada dataset adalah 0, sehingga dapat disimpulkan dataset ini bersih karena tidak memiliki nilai kosong
-### 2.1.2 Handle Duplicated Data
+### 2.1.2. Handle Duplicated Data
 - Pada saat dilakukan Handle ducpliated data didapatkan jumlah duplikat 757 baris yang sebelumnya hanya 125 baris. Hal ini disebabkan sesudah dilakukan drop beberapa fitur
-### 2.1.3 Handle Outliers
-- Sebelum melakukan handle outliers, kita melakukan splitting menjadi train dan test set yang kemudian kita hanya melakukan handle outliers pada data train dan selanjutnya dilakukan evaluasi performa model pada data test.
-- kita menggunakan metode Z-Score untuk menghapus data outlier ekstrem pada X_train set.
+### 2.1.3. Handle Outliers
+- Sebelum melakukan _handle outliers_, kita melakukan _splitting_ menjadi train dan test set yang kemudian kita hanya melakukan handle outliers pada data train dan selanjutnya dilakukan evaluasi performa model pada data test.
+- Kita menggunakan metode Z-Score untuk menghapus data outlier ekstrem pada X_train set.
 - Pada saat dilakukan handle outliers pada data train didapatkan X-train memiliki jumlah baris sebelum dilakukan filter outlier sebanyak 9.864 baris, sedangkan sesudah dilakukan filter outlier dihasilkan 8.377 baris.
-### 2.1.4 Feature Transformation
+### 2.1.4. Feature Transformation
 - Kita menggunakan Logarithmic Transformation untuk mengubah fitur numerikal terdistribusi menceng ke kanan menjadi terdistribusi lebih normal.
 
-|                           | Skewness                                                    |
+| Feature                   | Skewness                                                    |
 |:--------------------------|:------------------------------------------------------------|
 | `Administrative`          | 1.485398                                                    |
 | `Administrative_Duration` | 2.398119                                                    |
@@ -200,7 +200,7 @@ Tahap Pengerjaan
 - Dari tabel di atas dapat dilihat bahwa semua fitur numerikal memiliki skewness yang tinggi (nilai absolut dari skewness > 1), sehingga perlu di-log transformasi.
 - Kita menggunakan fungsi np.log untuk melakukan log transformasi pada variabel, dan menambahkan 1 untuk menghindari pembagian dengan nol. Setelah transformasi selesai, kita dapat memeriksa skewness kembali untuk memastikan bahwa nilai skewness sudah berkurang.
 
-| Feature Transformation    | Skewness                                                    |
+| Feature                   | Skewness                                                    |
 |:--------------------------|:------------------------------------------------------------|
 | `Administrative`          | 0.528311                                                    |
 | `Administrative_Duration` | 0.233996                                                    |
@@ -215,7 +215,7 @@ Tahap Pengerjaan
 
 - Setelah itu, kami menggunakan Min Max Scaler untuk menormalisasi data numerikal dalam rentang 0–1.
 
-|                             | count   |   mean    |    std    | min |   25%     |   50%     |   5%      | max |
+| Feature                     | count   |   mean    |    std    | min |   25%     |   50%     |   5%      | max |
 |:----------------------------|:--------|:----------|:----------|:----|:----------|:----------|:----------|:----|
 | `Administrative`            | 8377.0  | 0.292301  | 0.315649  | 0.0 | 0.000000  | 0.270238  | 0.540476	| 1.0 |
 | `Administrative_Duration`   | 8377.0  | 0.343896  | 0.353708  | 0.0 | 0.000000  | 0.303012  | 0.687338	| 1.0 |
@@ -227,19 +227,19 @@ Tahap Pengerjaan
 | `ExitRates`                 | 8377.0  | 0.198254  | 0.168897  | 0.0 | 0.082879  | 0.145081  | 0.255714	| 1.0 |
 | `PageValues`                | 8377.0  | 0.127191  | 0.277474  | 0.0 | 0.000000  | 0.000000  | 0.000000	| 1.0 |
 
-### 2.1.5 Feature Encoding
+### 2.1.5. Feature Encoding
 -Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
 - Terdapat 18 Fitur sebelum encoding dan Jumlah fitur sesudah encoding sebanyak 13 Fitur
 - -Setelah Encoding kita mengerluarkan beberapa fitur seperti Special Day,Month,Operating System,Browser,region,Traffic type dan untuk visitor type kita mengubah menjadi 3 fitur yaitu 'VisitorType_New_Visitor', 'VisitorType_Other', dan 'VisitorType_Returning_Visitor'
 - Berikut adalah fitur terbaru setelah Encoding : `Administrative`,`Administrative_Duration`,`Informational`,`Informational_Duration`,`ProductRelated`,  `ProductRelated_Duration`,`BounceRates`,`ExitRates` ,`PageValues`,`Weekend`,`VisitorType_New_Visitor`,`VisitorType_Other`,`VisitorType_Returning_Visitor`
-### 2.1.6 Handle Class Imbalance
+### 2.1.6. Handle Class Imbalance
 Kami menggunakan metode Random Over-Sampling untuk _handle_ fitur target yang tidak seimbang dengan menambahkan jumlah sample pada minority class sehingga setara dengan majority class
 - Dari proses pengerjaan yang kami lakukan, kami menemukan bahwa jumlah pelanggan yang melakukan transaksi hanya 1159 dibanding yang tidak melakukan transaksi 7218.
 - Setelah melakukan proses handling terhadap imbalance class, data yang melakukan transaksi dan tidak masing-masing berjumlah 8350
 
 ### 2.2. Feature Engineering
-#### 2.2.1 Feature Checking
-#### 2.2.2 Feature Selection
+#### 2.2.1. Feature Checking
+#### 2.2.2. Feature Selection
 Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fitur yang memiliki score tertinggi, yaitu:
 - PageValues memiliki score paling dominan, yaitu 463,2.
 - VisitorType_New_Visitor dan VisitorType_Returning_Visitor dapat memprediksi, karena tipe pelanggan dapat memengaruhi Purchase Rate.
@@ -249,9 +249,9 @@ Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fitur
 
 selain itu kami juga mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
 
-kemudian dari hasil beberapa metode feature selection tersebut kami mengambil ... feature, yaitu ...
+Lalu, dari hasil beberapa metode feature selection tersebut kami mengambil ... feature, yaitu ...
 
-#### 2.2.3 Feature Extraction
+#### 2.2.3. Feature Extraction
 Kami melakukan PCA (Principal Component Analysis) dengan tujuan mereduksi dimensi dengan membentuk feature baru dengan menggabungkan feature-feature yang sudah ada.
 - `TotalPage_view` sebuah featur baru yang berisi informasi total halaman yang dilihat customer selama mengunjungi web.
 - `TotalPage_time` sebuah featur baru yang berisi informasi total waktu yang dihabiskan customer dalam mengunjungi web.
@@ -264,7 +264,7 @@ Untuk mempermudah ML dalam memprediksi, kami mencoba untuk menggali informasi da
 - `PageValues_per_ProductView` merupakan feature yang berisi informasi rasio antara nilai halaman dan jumlah halaman produk sejenis, jika semakin tinggi nilainya maka bisa dikatakan halaman produk sejenis itu cenderung menciptakan transaksi.
 - `PageValues_per_ProductTime` merupakan feature yang berisi informasi rasio antara nilai halaman dan waktu yang dihabiskan untuk melihat produk sejenis, jika semakin tinggi nilainya maka customer tertarik pada produk yang ditawarkan dan cenderung melakukan transaksi setelah menghabiskan di halaman produk yang cukup lama.
 
-## Stage 3. Business Insight
+## Stage 3. Business Insights
 - Di daerah `Region` 1 memiliki jumlah pengunjung situs web e-commerce yang terbanyak. Solusi untuk meningkatkan ketertarikan pengunjung, kita bisa melakukan promosi ke daerah-daerah yang jarang mengunjungi situs web dengan memberikan penawaran spesial, seperti gratis ongkos pengiriman (ongkir).
 
 - Pengunjung yang berkunjung pada _weekend_ lebih sedikit dibandingkan dengan hari-hari biasa atau _weekday_, sehingga kita bisa mengadakan _event_ untuk menarik pelanggan melakukan transaksi pada waktu _weekend_.
