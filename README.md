@@ -229,8 +229,8 @@ Tahap Pengerjaan
 
 ### 2.1.5. Feature Encoding
 Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
-- Terdapat 18 Fitur sebelum encoding dan Jumlah fitur sesudah encoding sebanyak 13 Fitur
-- -Setelah Encoding kita mengeluarkan beberapa fitur seperti SpecialDay, Month, OperatingSystem, Browser, Region, TrafficType dan untuk visitor type kita mengubah menjadi 3 fitur yaitu 'VisitorType_New_Visitor', 'VisitorType_Other', dan 'VisitorType_Returning_Visitor'
+- Terdapat 18 Fitur sebelum encoding dan jumlah fitur sesudah encoding sebanyak 13 Fitur.
+- Setelah Encoding kita mengeluarkan beberapa fitur seperti `SpecialDay`, `Month`, `OperatingSystem`, `Browser`, `Region`, `TrafficType` dan untuk `VisitorType` kita mengubah menjadi 3 fitur yaitu `VisitorType_New_Visitor` dan `VisitorType_Returning_Visitor'.
 - Berikut adalah fitur terbaru setelah Encoding : `Administrative`, `Administrative_Duration`, `Informational`, `Informational_Duration`, `ProductRelated`, `ProductRelated_Duration`, `BounceRates`, `ExitRates`, `PageValues`, `Weekend`, `VisitorType_New_Visitor`, `VisitorType_Other`, `VisitorType_Returning_Visitor`
 ### 2.1.6. Handle Class Imbalance
 Kami menggunakan metode Random Over-Sampling untuk _handle_ fitur target yang tidak seimbang dengan menambahkan jumlah sample pada minority class sehingga setara dengan majority class
