@@ -228,10 +228,10 @@ Tahap Pengerjaan
 | `PageValues`                | 8377.0  | 0.127191  | 0.277474  | 0.0 | 0.000000  | 0.000000  | 0.000000	| 1.0 |
 
 ### 2.1.5. Feature Encoding
--Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
+Kita akan melakukan _feature encoding_ terhadap fitur `VisitorType`.
 - Terdapat 18 Fitur sebelum encoding dan Jumlah fitur sesudah encoding sebanyak 13 Fitur
-- -Setelah Encoding kita mengerluarkan beberapa fitur seperti Special Day,Month,Operating System,Browser,region,Traffic type dan untuk visitor type kita mengubah menjadi 3 fitur yaitu 'VisitorType_New_Visitor', 'VisitorType_Other', dan 'VisitorType_Returning_Visitor'
-- Berikut adalah fitur terbaru setelah Encoding : `Administrative`,`Administrative_Duration`,`Informational`,`Informational_Duration`,`ProductRelated`,  `ProductRelated_Duration`,`BounceRates`,`ExitRates` ,`PageValues`,`Weekend`,`VisitorType_New_Visitor`,`VisitorType_Other`,`VisitorType_Returning_Visitor`
+- -Setelah Encoding kita mengeluarkan beberapa fitur seperti SpecialDay, Month, OperatingSystem, Browser, Region, TrafficType dan untuk visitor type kita mengubah menjadi 3 fitur yaitu 'VisitorType_New_Visitor', 'VisitorType_Other', dan 'VisitorType_Returning_Visitor'
+- Berikut adalah fitur terbaru setelah Encoding : `Administrative`, `Administrative_Duration`, `Informational`, `Informational_Duration`, `ProductRelated`, `ProductRelated_Duration`, `BounceRates`, `ExitRates`, `PageValues`, `Weekend`, `VisitorType_New_Visitor`, `VisitorType_Other`, `VisitorType_Returning_Visitor`
 ### 2.1.6. Handle Class Imbalance
 Kami menggunakan metode Random Over-Sampling untuk _handle_ fitur target yang tidak seimbang dengan menambahkan jumlah sample pada minority class sehingga setara dengan majority class
 - Dari proses pengerjaan yang kami lakukan, kami menemukan bahwa jumlah pelanggan yang melakukan transaksi hanya 1159 dibanding yang tidak melakukan transaksi 7218.
@@ -247,7 +247,7 @@ Dari hasil feature selection menggunakan metode Chi-Square, menampilkan 10 fitur
 - ExitRates dan BounceRates dapat memprediksi pelanggan itu melakukan purchase atau tidak, karena ketika ExitRates atau BounceRates yang rendah akan terjadi Purchase Rate yang tinggi.
 - Administrative, Informational, dan ProductRelated dapat memprediksi, karena ketika makin banyak jumlah halaman yang dikunjungi, maka makin besar kemungkinan terjadi Purchase Rate.
 
-selain itu kami juga mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
+Selain itu, kami juga mencoba menggunakan metode Extra Trees Classifier dan metode F-Classif yang menghasilkan nilai relatif mirip dengan metode Chi-Square. namun ketika kami menggunakan metode ANOVA F-value-based Feature Selection (AF), hasil yang dihasilkan berbeda dari metode lainnya, di mana nilai yang tertinggi dimiliki oleh fitur VisitorType_Returning_Visitor, bukan PageValues.
 
 Lalu, dari hasil beberapa metode feature selection tersebut kami mengambil ... feature, yaitu ...
 
