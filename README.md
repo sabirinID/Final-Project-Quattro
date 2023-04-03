@@ -30,6 +30,24 @@ Final Project ini disusun sebagai salah satu syarat untuk menyelesaikan Data Sci
     * [Data Cleansing](#21-Data-Cleansing)
     * [Feature Engineering](#22-Feature-Engineering)
 
+## Project Organization
+```
+.
+├── Dataset/                              : contains csv file
+│   ├── about.txt                         : about dataset
+│   ├── online_shoppers_intention.csv     : Online Shoppers Purchasing Intention dataset
+│   ├── test.csv                          : test set
+│   └── train.csv                         : train set
+├── Images                                : contains images
+├── Notebooks/                            : contains ipynb file
+│   ├── 1_Exploratory_Data_Analysis.ipynb : Data analytics process to understand the data in depth
+│   ├── 2_Data_Preprocessing.ipynb        : Data preprocessing for machine learning (ML)
+│   └── 3_Modeling.ipynb                  : Random Forest model to predict the customers purchase intention
+├── LICENSE                               : MIT License
+├── README.md                             : Report
+└── requirements.txt                      : requirements to run this model
+```
+
 ## Stage 0. Preparation
 
 ### 0.1. Problem Statement
