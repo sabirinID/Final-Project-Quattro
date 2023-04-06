@@ -1,2 +1,2 @@
-# About this file
+# About
 Online Shoppers Purchasing Intention Dataset from UCI Machine Learning Repository.
